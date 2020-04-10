@@ -1,0 +1,162 @@
+body {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+    /* background-repeat: no-repeat; */
+}
+
+h1 {
+    height: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.game-row {
+    height: 100%;
+}
+
+aside > div {
+    padding: 5%;
+    text-align: center;
+    background-color: #86ceeb;
+    margin: 7px 10px;
+    width: 70%;
+}
+
+main {
+    justify-content: space-evenly;
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > div {
+    width: 20%;
+    height: 50%;
+    margin: 0.5% 0.25%;
+    background-image: url("../images/dining-card.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-row {
+    display: flex;
+}
+
+.card-front, .card-back {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.card {
+    position: relative;
+}
+
+.card-back {
+    background-image: url("../images/dining-card.png");
+}
+
+.boba {
+    background-image: url("../images/boba.png");
+}
+
+.burger {
+    background-image: url("../images/burger.png");
+}
+
+.coffee {
+    background-image: url("../images/coffee.png");
+}
+
+.croissant {
+    background-image: url("../images/croissant.png");
+}
+
+.donut {
+    background-image: url("../images/donut.png");
+}
+
+.fish {
+    background-image: url("../images/fish.png");
+}
+
+.milk {
+    background-image: url("../images/milk.png");
+}
+
+.popsicle {
+    background-image: url("../images/popsicle.png");
+}
+
+.dumplings {
+    background-image: url("../images/dumplings.png");
+}
+
+.hidden {
+    display: none;
+}
+
+#modal {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-stuff {
+    margin: auto;
+    margin-top: 20%;
+    width: 50%;
+    height: 50%;
+    padding: 8%;
+    border: 5px solid #1ebcba;
+    border-radius: 10px;
+    background-color: #303a43;
+    display: block;
+    position: relative;
+    border-style: outset;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: auto;
+    font-size: 1.7rem;
+    color: white;
+    text-shadow: 3px 4px #1c2022;
+}
+
+#reset {
+    font-size: 1.1rem;
+    border-radius: 3px;
+    background-color: #1ebcba;
+    color: black;
+    padding: 3%;
+    margin: 5%;
+    font-weight: 600;
+    border: 2px white;
+    border-style: outset;
+}
+
+.dark-gray {
+    color: cornflowerblue;
+    text-shadow: 1px 1px aliceblue;
+}
+
+/* iphone 5/6 */
+@media (orientation: portrait){
+    @media (max-width: 768px){
+        .col-2{
+            flex-basis: 25%;
+        }
+    }
+}
+/* ipad */
