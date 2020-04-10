@@ -14,6 +14,8 @@ var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
 
+//adding clickhandler
+
 function handleClick(event){
     if(event.target.className.indexOf("card-back") === -1) {
         return;
@@ -46,9 +48,9 @@ function handleClick(event){
             }else{
                 gameCards.removeEventListener("click", handleClick);
                 setTimeout(goodbye, 1500);
-                function goodbye(){
+                function goodbye(){ 
                     firstCardClicked.classList.remove("hidden");
-                    secondCardClicked.classList.remove("hidden");
+                    secondCardClicked.classList.remove("hidden"); 
                     firstCardClicked = null;
                     secondCardClicked = null;
                     gameCards.addEventListener("click", handleClick);
@@ -72,15 +74,18 @@ function calculateAccuracy(attempts, matches) {
     return ((matches / attempts)*100).toFixed(1) + "%";
 }
 
+//resetting the game
+
 var resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", resetGame);
 
 function resetCards() {
     var hiddenCards = document.querySelectorAll(".card-back");
     for (var i = 0; i < hiddenCards.length; i++){
-        hiddenCards[i].classList.remove("hidden");
+        hiddenCards[i].classList.remove("hidden"); 
     }
 }
+
 
 function resetGame() {
     maxMatches = 9;
@@ -94,10 +99,14 @@ function resetGame() {
     modal.classList.add("hidden");
 }
 
-var cardArray = ["boba", "burger", "coffee", "croissant", "donut", "fish", "milk", "popsicle",
-"dumplings", "boba", "burger", "coffee", "croissant",
-"donut", "fish", "milk", "popsicle", "dumplings"];
+//shuffling cards
 
+var cardArray = ["css-logo", "docker-logo", "github-logo", "html-logo", "js-logo", "mysql-logo", 
+"node-logo", "php-logo", "react-logo", "css-logo", "docker-logo", "github-logo", 
+"html-logo", "js-logo", "mysql-logo", "node-logo", "php-logo", "react-logo"];
+
+
+// create dynamic cards
 function newCards(){
     for (var i = 0; i < cardArray.length; i++) {
         var gameCards = document.querySelector("#game-cards");
@@ -109,10 +118,11 @@ function newCards(){
         frontCardDiv.classList.add(cardArray[i]);
         var backCardDiv = document.createElement('div');
         backCardDiv.classList.add("card-back");
-
+        
         cardDiv.appendChild(frontCardDiv);
         cardDiv.appendChild(backCardDiv);
         gameCards.appendChild(cardDiv);
+        
     }
 }
 
@@ -132,3 +142,4 @@ function shuffleCards() {
     cardArray[randomPosition] = placeholder;
     }
 }
+
