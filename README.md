@@ -5,7 +5,7 @@
 
 ## Description
 
-A Vintage Star Wars themed card matching game with live statistic tracking and CSS3 animation
+In progress
 
 ## Technologies Used
 
