@@ -14,12 +14,10 @@ var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
 
-//adding clickhandler
-
-function handleClick(event){
-    if(event.target.className.indexOf("card-back") === -1) {
+function handleClick(event) {
+    if (event.target.className.indexOf("card-back") === -1) {
         return;
-      }
+    }
     event.target.classList.add("hidden");
 
     if (!firstCardClicked) {
@@ -27,33 +25,33 @@ function handleClick(event){
         var firstCardFront = firstCardClicked.previousElementSibling;
         firstCardClasses = firstCardFront.className;
 
-    }else{
+    } else {
         secondCardClicked = event.target;
         var secondCardFront = secondCardClicked.previousElementSibling;
         secondCardClasses = secondCardFront.className;
         attempts++;
 
-        if(firstCardClasses === secondCardClasses){
+        if (firstCardClasses === secondCardClasses) {
             firstCardClicked = null;
             secondCardClicked = null;
             gameCards.addEventListener("click", handleClick);
             matches++;
             displayStats();
-            if (matches === maxMatches){
+            if (matches === maxMatches) {
                 modal.classList.remove("hidden");
                 gamesPlayed++;
                 displayStats();
             }
 
-            }else{
-                gameCards.removeEventListener("click", handleClick);
-                setTimeout(goodbye, 1500);
-                function goodbye(){ 
-                    firstCardClicked.classList.remove("hidden");
-                    secondCardClicked.classList.remove("hidden"); 
-                    firstCardClicked = null;
-                    secondCardClicked = null;
-                    gameCards.addEventListener("click", handleClick);
+        } else {
+            gameCards.removeEventListener("click", handleClick);
+            setTimeout(goodbye, 1500);
+            function goodbye() {
+                firstCardClicked.classList.remove("hidden");
+                secondCardClicked.classList.remove("hidden");
+                firstCardClicked = null;
+                secondCardClicked = null;
+                gameCards.addEventListener("click", handleClick);
             }
             displayStats();
         }
@@ -68,24 +66,21 @@ function displayStats() {
 }
 
 function calculateAccuracy(attempts, matches) {
-    if(attempts === 0) {
+    if (attempts === 0) {
         return "0.0%"
     }
-    return ((matches / attempts)*100).toFixed(1) + "%";
+    return ((matches / attempts) * 100).toFixed(1) + "%";
 }
-
-//resetting the game
 
 var resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", resetGame);
 
 function resetCards() {
     var hiddenCards = document.querySelectorAll(".card-back");
-    for (var i = 0; i < hiddenCards.length; i++){
-        hiddenCards[i].classList.remove("hidden"); 
+    for (var i = 0; i < hiddenCards.length; i++) {
+        hiddenCards[i].classList.remove("hidden");
     }
 }
-
 
 function resetGame() {
     maxMatches = 9;
@@ -99,15 +94,11 @@ function resetGame() {
     modal.classList.add("hidden");
 }
 
-//shuffling cards
+var cardArray = ["boba", "burger", "coffee", "croissant", "donut", "fish", "milk", "popsicle",
+    "dumplings", "boba", "burger", "coffee", "croissant",
+    "donut", "fish", "milk", "popsicle", "dumplings"];
 
-var cardArray = ["css-logo", "docker-logo", "github-logo", "html-logo", "js-logo", "mysql-logo", 
-"node-logo", "php-logo", "react-logo", "css-logo", "docker-logo", "github-logo", 
-"html-logo", "js-logo", "mysql-logo", "node-logo", "php-logo", "react-logo"];
-
-
-// create dynamic cards
-function newCards(){
+function newCards() {
     for (var i = 0; i < cardArray.length; i++) {
         var gameCards = document.querySelector("#game-cards");
         var cardDiv = document.createElement('div');
@@ -118,28 +109,26 @@ function newCards(){
         frontCardDiv.classList.add(cardArray[i]);
         var backCardDiv = document.createElement('div');
         backCardDiv.classList.add("card-back");
-        
+
         cardDiv.appendChild(frontCardDiv);
         cardDiv.appendChild(backCardDiv);
         gameCards.appendChild(cardDiv);
-        
     }
 }
 
 var element = document.querySelector("#game-cards");
 
 function destroyChildren() {
-    while (element.firstChild){
+    while (element.firstChild) {
         element.removeChild(element.firstChild);
     }
 }
 
 function shuffleCards() {
     for (var i = 0; i < cardArray.length; i++) {
-    var randomPosition = Math.floor(Math.random()*cardArray.length);
-    var placeholder = cardArray[i];
-    cardArray[i] = cardArray[randomPosition];
-    cardArray[randomPosition] = placeholder;
+        var randomPosition = Math.floor(Math.random() * cardArray.length);
+        var placeholder = cardArray[i];
+        cardArray[i] = cardArray[randomPosition];
+        cardArray[randomPosition] = placeholder;
     }
 }
-
