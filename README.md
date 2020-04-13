@@ -5,7 +5,7 @@
 
 ## Description
 
-In progress
+We are all potatoes. We come in different size, shapes, and personalities. Here's a memory match for potatoes like you and me. :)
 
 ## Technologies Used
 
