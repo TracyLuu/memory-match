@@ -34,7 +34,7 @@ Try the application live at [http://memory-match.tracyluu.com](http://memory-mat
 1. Clone the repository.
 
     ```shell
-    git clone https://github.com/tracyluu/memory-match.git
+    git clone https://github.com/tracyluu/potato-match.git
     ```
 
 2. Change directory to clone folder
