@@ -1,4 +1,4 @@
-# Memory Match
+# Potato Match
 
 > - Maintained by: `TracyLuu`
 
