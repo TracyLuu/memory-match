@@ -1,10 +1,10 @@
 
 
 body {
-    background: url("../images/lfz-background.jpg") no-repeat center center fixed;
+    /* background: url("../images/lfz-background.jpg") no-repeat center center fixed; */
+    background: white;
     background-size: cover;
-    width: 100%;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 h1 {
@@ -13,91 +13,120 @@ h1 {
     text-align: center;
 }
 
-.game-row {
-    height: 100%;
-}
-
 aside > div {
-    padding: 5%;
+    padding: 1rem;
     text-align: center;
-    background-color: #86ceeb;
+    background-color: white;
     margin: 7px 10px;
     width: 70%;
+    box-shadow: 5px 10px #2860CE;
+    border-radius: 5px;
+    color: #2860CE;
+    justify-content: space-evenly;
 }
 
-main {
+aside {
+    background-color: #2f7bd3;
+    box-shadow: 5px 10px #2860CE;
+    border-radius: 5px;
+}
+
+#game-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* flex-shrink: inherit ; */
+}
+
+/* main {
     justify-content: space-evenly;
     padding: 1%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
-main > div {
-    width: 20%;
-    height: 50%;
+/* main > div {
+    height: 200px;
     margin: 0.5% 0.25%;
-    background-image: url("../images/dining-card.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+} */
 
-.game-row {
+/* .game-row {
     display: flex;
-}
+} */
+/* .row {
+    width: 100%;
+    height: auto;
+} */
 
 .card-front, .card-back {
     height: 100%;
     width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     position: absolute;
 }
 
 .card {
+    /*width: 100%;*/
+    flex-basis: calc(100% / 6);
+    height: auto;
     position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-basis: content;
+}
+
+.potato {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #2f7bd3;
+    border-radius: 5px;
 }
 
 .card-back {
-    background-image: url("../images/dining-card.png");
+    background-image: url("../images/back-card.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #2f7bd3;
+    border-radius: 5px;
 }
 
-.boba {
-    background-image: url("../images/boba.png");
+.coding {
+    background-image: url("../images/coding-potato.jpg");
 }
 
-.burger {
-    background-image: url("../images/burger.png");
+.couch {
+    background-image: url("../images/couch-potato.jpg");
 }
 
-.coffee {
-    background-image: url("../images/coffee.png");
+.girl {
+    background-image: url("../images/girl-potato.jpg");
 }
 
-.croissant {
-    background-image: url("../images/croissant.png");
+.happy {
+    background-image: url("../images/happy-potato.jpg");
 }
 
-.donut {
-    background-image: url("../images/donut.png");
+.nerdy {
+    background-image: url("../images/nerdy-potato.jpg");
 }
 
-.fish {
-    background-image: url("../images/fish.png");
+.old {
+    background-image: url("../images/old-potato.jpg");
 }
 
-.milk {
-    background-image: url("../images/milk.png");
+.party {
+    background-image: url("../images/party-potato.jpg");
 }
 
-.popsicle {
-    background-image: url("../images/popsicle.png");
+.sassy {
+    background-image: url("../images/sassy-potato.jpg");
 }
 
-.dumplings {
-    background-image: url("../images/dumplings.png");
+.uhh {
+    background-image: url("../images/uhh-potato.jpg");
 }
 
 .hidden {
@@ -147,7 +176,7 @@ p {
     border-style: outset;
 }
 
-.dark-gray {
+.title {
     color: cornflowerblue;
     text-shadow: 1px 1px aliceblue;
 }
@@ -158,7 +187,13 @@ p {
 @media (orientation: portrait){
     @media (max-width: 768px){
         .col-2{
-            flex-basis: 25%;
+            /* flex-basis: 50%; */
+            /* width: 25%; */
+            flex-wrap: wrap;
+            margin: 0.25%;
+        }
+        .card-back{
+
         }
     }
 }
