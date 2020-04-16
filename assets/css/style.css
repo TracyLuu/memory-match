@@ -6,14 +6,20 @@ body {
     height: 100%;
 }
 
-.header {
+
+.header-container {
+
+}
+
+header {
+    font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
+    font-size: 40px;
     height: 100%;
     width: 100%;
-    padding: 20px;
     text-align: center;
     color: cornflowerblue;
     text-shadow: 1px 1px aliceblue;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 aside > div {
@@ -21,7 +27,7 @@ aside > div {
     text-align: center;
     background-color: white;
     margin: 7px 10px;
-    width: 70%;
+    width: 10vw;
     box-shadow: 5px 10px #2860CE;
     border-radius: 5px;
     color: #2860CE;
@@ -185,16 +191,14 @@ p {
 /* iphone 5/6 */
 @media (orientation: portrait){
     @media (max-width: 768px){
-        .card{
-            flex-wrap: wrap;
+        #game-cards{
             flex-direction: column;
-            /* width: 25%; */
-            flex-wrap: wrap;
+            width: 50%;
             margin: 1vw;
         }
-        /* .card-back{
-
-        } */
+        .stats {
+            flex-direction: row;
+        }
     }
 }
 /* ipad */
