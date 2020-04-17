@@ -47,6 +47,11 @@ body {
         text-align: center;
 } */
 
+/* html {
+    width: 100%;
+    height: 100%;
+} */
+
 header {
     font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
     font-size: 55px;
@@ -95,7 +100,7 @@ header {
 
 .card-container {
     flex-basis: calc(100% / 6);
-    /* height: auto; */
+    height: auto;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -198,90 +203,66 @@ p {
     }
 
     .potato {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    width: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5px;
+        height: 100px;
     }
 
     .card-back {
-    background-image: url("../images/back-card.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    width: 150px;
+        background-image: url("../images/back-card.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5px;
+        height: 100px;
+    }
+    div#game-cards.col-10{
+        align-items: center;
     }
 }
 
 @media (max-width: 480px){
+    html {
+        margin: 0 auto;
+    }
     #game-cards{
         margin: 1vh;;
         background-position: center;
         justify-content: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: column;
     }
 
     .stats-container {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        height: 100px;
-        width: 300px;
+        display: none;
     }
 
     div.stats-container.col-2 {
         width: 350px;
+        display: flex;
         flex-wrap: wrap;
-    }
-
-    /* .col-10 {
-        width: 300px;
-    } */
-
-    /* .card-container {
-    flex-basis: calc(100% / 6);
-    height: auto;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    flex-basis: content;
-    width: 12vw;
-} */
-
-    div.card-container {
-        margin: 0.5vh;
-        border-radius: 1px solid #2f7bd3;
-        align-content: center;
-    }
-
-    .container {
-        flex-wrap: wrap;
+        margin: auto;
     }
 
     .potato {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    width: 100px;
-    border: 1px solid #2f7bd3;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5px;
+        height: 110px;
     }
 
     .card-back {
-    background-image: url("../images/back-card.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    width: 100px;
-    border: 1px solid #2f7bd3;
-    position: relative;
+        background-image: url("../images/back-card.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5px;
+        height: 110px;
     }
-    /* .card-container {
-
-    } */
+    div#game-cards.col-10{
+        align-items: center;
+    }
 }
