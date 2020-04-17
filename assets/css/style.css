@@ -1,38 +1,4 @@
-.coding {
-    background-image: url("../images/coding-potato.jpg");
-}
 
-.couch {
-    background-image: url("../images/couch-potato.jpg");
-}
-
-.girl {
-    background-image: url("../images/girl-potato.jpg");
-}
-
-.happy {
-    background-image: url("../images/happy-potato.jpg");
-}
-
-.nerdy {
-    background-image: url("../images/nerdy-potato.jpg");
-}
-
-.old {
-    background-image: url("../images/old-potato.jpg");
-}
-
-.party {
-    background-image: url("../images/party-potato.jpg");
-}
-
-.sassy {
-    background-image: url("../images/sassy-potato.jpg");
-}
-
-.uhh {
-    background-image: url("../images/uhh-potato.jpg");
-}
 
 body {
     background: url("../images/brown-stripes.jpg");
@@ -74,7 +40,7 @@ header {
     text-align: center;
 }
 
-#game-cards {
+.main-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -100,7 +66,7 @@ div.container {
     height: 700px;
 }
 
-.potato {
+.card-front {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -169,15 +135,13 @@ p {
 }
 
 @media (max-width: 768px){
-    html {
-        height: 700px;
-    }
 
-    #game-cards{
+    .main-container{
         flex-direction: column;
         width: 300%;
         margin: 0;
         background-position: center;
+        align-items: center;
     }
 
     .stats-container {
@@ -187,7 +151,7 @@ p {
         height: 300px;
     }
 
-    .potato {
+    .card-front {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -203,16 +167,13 @@ p {
         border-radius: 5px;
         height: 100px;
     }
-    div#game-cards.col-10{
+    .main-container {
         align-items: center;
     }
 }
 
 @media (max-width: 480px){
-    html {
-        margin: 0 auto;
-    }
-    #game-cards{
+    .main-container{
         margin: 1vh;;
         background-position: center;
         justify-content: center;
@@ -221,17 +182,13 @@ p {
     }
 
     .stats-container {
-        display: none;
-    }
-
-    div.stats-container.col-2 {
-        width: 350px;
+        width: 160px;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
     }
 
-    .potato {
+    .card-front {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -247,7 +204,43 @@ p {
         border-radius: 5px;
         height: 110px;
     }
-    div#game-cards.col-10{
+    /* div.main-container.col-10{
         align-items: center;
-    }
+    } */
+}
+
+.coding-potato {
+    background-image: url("../images/coding-potato.jpg");
+}
+
+.couch-potato {
+    background-image: url("../images/couch-potato.jpg");
+}
+
+.girl-potato {
+    background-image: url("../images/girl-potato.jpg");
+}
+
+.happy-potato {
+    background-image: url("../images/happy-potato.jpg");
+}
+
+.nerdy-potato {
+    background-image: url("../images/nerdy-potato.jpg");
+}
+
+.old-potato {
+    background-image: url("../images/old-potato.jpg");
+}
+
+.party-potato {
+    background-image: url("../images/party-potato.jpg");
+}
+
+.sassy-potato {
+    background-image: url("../images/sassy-potato.jpg");
+}
+
+.uhh-potato {
+    background-image: url("../images/uhh-potato.jpg");
 }

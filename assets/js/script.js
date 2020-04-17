@@ -103,9 +103,10 @@ function resetGame() {
     modal.classList.add("hidden");
 }
 
-var cardArray = ["coding", "couch", "girl", "happy", "nerdy", "old", "party", "sassy",
-    "uhh", "coding", "couch", "girl", "happy",
-    "nerdy", "old", "party", "sassy", "uhh"];
+var cardArray = ["coding-potato", "couch-potato", "girl-potato", "happy-potato",
+    "nerdy-potato", "old-potato", "party-potato", "sassy-potato", "uhh-potato",
+    "coding-potato", "couch-potato", "girl-potato", "happy-potato",
+    "nerdy-potato", "old-potato", "party-potato", "sassy-potato", "uhh-potato"];
 
 function newCards() {
     for (var i = 0; i < cardArray.length; i++) {
