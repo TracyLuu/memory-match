@@ -88,6 +88,11 @@ div.container {
     background-position: center;
     border-radius: 5px;
     width: 100px;
+    cursor: pointer;
+}
+
+.card-back:hover {
+    transform: scale(1.1);
 }
 
 .hidden {
@@ -162,7 +167,6 @@ p {
 }
 
 @media (max-width: 825px){
-
     .main-container {
         flex-direction: column;
         width: 300%;
