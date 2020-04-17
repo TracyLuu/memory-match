@@ -2,7 +2,6 @@ body {
     /* background: url("../images/lfz-background.jpg") no-repeat center center fixed; */
     background: #e5a76e5e;
     background-size: cover;
-    margin: 2rem auto;
     height: 100%;
 }
 
@@ -13,22 +12,22 @@ body {
 
 header {
     font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
-    font-size: 40px;
+    font-size: 55px;
     height: 100%;
     width: 100%;
     text-align: center;
-    color: cornflowerblue;
-    text-shadow: 1px 1px aliceblue;
+    color: #2f7bd3;
+    text-shadow: 2px 2px #2860CE;
     font-weight: 800;
 }
 
-aside > div {
+aside div {
     padding: 1rem;
     text-align: center;
     background-color: white;
     margin: 7px 10px;
     width: 10vw;
-    box-shadow: 5px 10px #2860CE;
+    /* box-shadow: 5px 10px #2860CE; */
     border-radius: 5px;
     color: #2860CE;
     justify-content: space-evenly;
@@ -47,7 +46,6 @@ aside > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* flex-shrink: inherit ; */
 }
 
 /* main {
@@ -63,10 +61,6 @@ aside > div {
     margin: 0.5% 0.25%;
 } */
 
-/* .game-row {
-    display: flex;
-} */
-
 .card-front, .card-back {
     height: 100%;
     width: 100%;
@@ -74,7 +68,6 @@ aside > div {
 }
 
 .card {
-    /*width: 100%;*/
     flex-basis: calc(100% / 6);
     height: auto;
     position: relative;
@@ -89,9 +82,9 @@ aside > div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* border: 1px solid #2f7bd3; */
     border-radius: 5px;
     height: 150px;
+    border: 1px solid #2f7bd3;
 }
 
 .card-back {
@@ -99,9 +92,9 @@ aside > div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* border: 1px solid #2f7bd3; */
     border-radius: 5px;
     height: 150px;
+    border: 1px solid #2f7bd3;
 }
 
 .coding {
@@ -159,46 +152,110 @@ aside > div {
     width: 50%;
     height: 50%;
     padding: 8%;
-    border: 5px solid #1ebcba;
+    border: 5px solid #2860CE;
     border-radius: 10px;
-    background-color: #303a43;
+    background-color: #2f7bd3;
     display: block;
     position: relative;
     border-style: outset;
 }
 
 p {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
     margin: auto;
     font-size: 1.7rem;
     color: white;
-    text-shadow: 3px 4px #1c2022;
+    text-shadow: 3px 4px rgb(42, 90, 187);
 }
 
 #reset {
+    font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
     font-size: 1.1rem;
     border-radius: 3px;
-    background-color: #1ebcba;
-    color: black;
+    background-color: white;
+    color: #2f7bd3;
     padding: 3%;
     margin: 5%;
     font-weight: 600;
-    border: 2px white;
+    border: 2px #2860CE;
+    border-radius: 5px;
     border-style: outset;
 }
 
 
 /* iphone 5/6 */
-@media (orientation: portrait){
-    @media (max-width: 768px){
-        #game-cards{
-            flex-direction: column;
-            width: 50%;
-            margin: 1vw;
-        }
-        .stats {
-            flex-direction: row;
-        }
+@media (max-width: 768px){
+    html {
+        height: 700px;
+    }
+    #game-cards{
+        flex-direction: column;
+        width: 300%;
+        margin: 0;
+        background-position: center;
+    }
+    .stats {
+        width: 100%;
+        flex-direction: row;
+        position: relative;
+    }
+
+    aside div {
+        width: 100%;
+        flex-direction: row;
     }
 }
 /* ipad */
+
+@media (max-width: 480px){
+    html {
+        height: 600px;
+    }
+    #game-cards{
+        flex-direction: column;
+        margin: 0;
+        background-position: center;
+    }
+    .stats {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: 100px;
+        width: 300px;
+    }
+
+    div.stats.col-2 {
+        width: 350px;
+        flex-wrap: wrap;
+    }
+
+    aside div {
+        width: 40%;
+    }
+
+    .col-10 {
+        width: 300px;
+    }
+    .container {
+        flex-wrap: wrap;
+    }
+    .potato {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 65px;
+    border: 1px solid #2f7bd3;
+    }
+    .card-back {
+    background-image: url("../images/back-card.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 65px;
+    border: 1px solid #2f7bd3;
+    }
+}
