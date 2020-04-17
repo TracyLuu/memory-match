@@ -83,13 +83,13 @@ div.container {
     height: 150px;
 }
 
-
-
 .hidden {
     display: none;
 }
 
 #modal {
+    top: 0;
+    left: 0;
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -173,6 +173,10 @@ p {
 }
 
 @media (max-width: 480px){
+    .stats-container {
+        display: none;
+    }
+
     .main-container{
         margin: 1vh;;
         background-position: center;
@@ -202,7 +206,7 @@ p {
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 5px;
-        height: 110px;
+        height: 70px;
     }
     /* div.main-container.col-10{
         align-items: center;

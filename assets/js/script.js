@@ -14,6 +14,14 @@ var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
 
+var cardArray = ["coding-potato", "couch-potato", "girl-potato", "happy-potato",
+    "nerdy-potato", "old-potato", "party-potato", "sassy-potato", "uhh-potato",
+    "coding-potato", "couch-potato", "girl-potato", "happy-potato",
+    "nerdy-potato", "old-potato", "party-potato", "sassy-potato", "uhh-potato"];
+
+shuffleCards();
+newCards();
+
 function handleClick(event) {
     if (event.target.className.indexOf("card-back") === -1) {
         return;
@@ -84,36 +92,24 @@ function calculateAccuracy(attempts, matches) {
 var resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", resetGame);
 
-function resetCards() {
-    var hiddenCards = document.querySelectorAll(".card-back");
-    for (var i = 0; i < hiddenCards.length; i++) {
-        hiddenCards[i].classList.remove("hidden");
-    }
-}
-
 function resetGame() {
     maxMatches = 9;
     matches = 0;
     attempts = 0;
     displayStats();
-    resetCards();
     destroyChildren();
-    newCards();
     shuffleCards();
+    newCards();
     modal.classList.add("hidden");
 }
 
-var cardArray = ["coding-potato", "couch-potato", "girl-potato", "happy-potato",
-    "nerdy-potato", "old-potato", "party-potato", "sassy-potato", "uhh-potato",
-    "coding-potato", "couch-potato", "girl-potato", "happy-potato",
-    "nerdy-potato", "old-potato", "party-potato", "sassy-potato", "uhh-potato"];
+
 
 function newCards() {
     for (var i = 0; i < cardArray.length; i++) {
         var gameCards = document.querySelector("#game-cards");
         var cardDiv = document.createElement('div');
-        cardDiv.classList.add("col-2");
-        cardDiv.classList.add("card");
+        cardDiv.classList.add("card-container");
         var frontCardDiv = document.createElement('div');
         frontCardDiv.classList.add("card-front");
         frontCardDiv.classList.add(cardArray[i]);
