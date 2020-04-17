@@ -141,7 +141,7 @@ p {
     border-style: outset;
 }
 
-@media (min-width: 826px){
+@media (min-width: 826px) {
     header {
         font-size: 80px;
         text-align: center;
@@ -199,7 +199,7 @@ p {
     }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
     header {
         height: 80px;
     }
@@ -281,6 +281,34 @@ p {
         background-position: center;
         justify-content: center;
         width: 50px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 415px) {
+    header {
+        font-size: 28px;
+    }
+    .header-container {
+        height: 1px;
+    }
+
+    .stats-row {
+        padding: 5px;
+        width: 70px;
+    }
+
+    .stats-container {
+        top: 50px;
+        height: 232px;
+    }
+
+    .main-container {
+        flex-direction: row;
+    }
+
+    div.container {
+        height: 315px;
+        justify-content: space-evenly;
     }
 }
 
