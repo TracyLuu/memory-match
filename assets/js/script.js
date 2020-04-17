@@ -58,6 +58,15 @@ function handleClick(event) {
     }
 }
 
+function shuffleCards() {
+    for (var i = 0; i < cardArray.length; i++) {
+        var randomPosition = Math.floor(Math.random() * cardArray.length);
+        var placeholder = cardArray[i];
+        cardArray[i] = cardArray[randomPosition];
+        cardArray[randomPosition] = placeholder;
+    }
+}
+
 function displayStats() {
     document.getElementById("games-played").textContent = gamesPlayed;
     document.getElementById("attempts").textContent = attempts;
@@ -121,14 +130,5 @@ var element = document.querySelector("#game-cards");
 function destroyChildren() {
     while (element.firstChild) {
         element.removeChild(element.firstChild);
-    }
-}
-
-function shuffleCards() {
-    for (var i = 0; i < cardArray.length; i++) {
-        var randomPosition = Math.floor(Math.random() * cardArray.length);
-        var placeholder = cardArray[i];
-        cardArray[i] = cardArray[randomPosition];
-        cardArray[randomPosition] = placeholder;
     }
 }
