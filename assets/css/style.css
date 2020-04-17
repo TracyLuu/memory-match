@@ -29,13 +29,21 @@ header {
     text-align: center;
 }
 
+.stats-container2 {
+    display: none;
+}
+
+.stats-row2{
+    display: none;
+}
+
 .stats-container {
     background-color: #2f7bd3;
-    padding: 1vw;
+    padding: 3px;
     box-shadow: 5px 10px #2860CE;
     border-radius: 5px;
     justify-content: space-evenly;
-    margin: 2vw;
+    margin: 5px;
     width: 200px;
     text-align: center;
 }
@@ -59,7 +67,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 12vw;
+    width: 100px;
 }
 
 div.container {
@@ -71,7 +79,7 @@ div.container {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 5px;
-    height: 150px;
+    width: 100px;
 }
 
 .card-back {
@@ -80,7 +88,7 @@ div.container {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 5px;
-    height: 150px;
+    width: 100px;
 }
 
 .hidden {
@@ -136,7 +144,7 @@ p {
 
 @media (max-width: 768px){
 
-    .main-container{
+    .main-container {
         flex-direction: column;
         width: 300%;
         margin: 0;
@@ -173,23 +181,62 @@ p {
 }
 
 @media (max-width: 480px){
+    header {
+        height: 80px;
+    }
+
+    .stats-container {
+        display: none;
+    }
+
+    .stats-row{
+        display: none;
+    }
+
     .stats-container {
         display: none;
     }
 
     .main-container{
-        margin: 1vh;;
+        margin: 15px;
         background-position: center;
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: column;
     }
 
-    .stats-container {
-        width: 160px;
+    .container{
+        justify-content: center;
+    }
+
+    .stats-container2 {
+        background-color: #2f7bd3;
+        padding: 3px;
+        box-shadow: 5px 10px #2860CE;
+        border-radius: 5px;
+        justify-content: space-evenly;
+        margin: 5px;
+        width: 200px;
+        text-align: center;
+    }
+
+    .stats-container2 {
+        width: 300px;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
+    }
+
+    .stats-row2{
+        padding: 2px;
+        background-color: white;
+        width: 70px;
+        border: 2px solid #2860CE;
+        border-radius: 5px;
+        color: #2860CE;
+        font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
+        display: inline-block;
+        text-align: center;
     }
 
     .card-front {
@@ -197,7 +244,7 @@ p {
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 5px;
-        height: 110px;
+        height: 70px;
     }
 
     .card-back {
@@ -206,6 +253,16 @@ p {
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 5px;
+        height: 70px;
+    }
+    .card-container {
+        flex-basis: none;
+        height: auto;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-content: center;
         height: 70px;
     }
     /* div.main-container.col-10{
