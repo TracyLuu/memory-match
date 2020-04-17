@@ -94,9 +94,9 @@ function resetGame() {
     modal.classList.add("hidden");
 }
 
-var cardArray = ["boba", "burger", "coffee", "croissant", "donut", "fish", "milk", "popsicle",
-    "dumplings", "boba", "burger", "coffee", "croissant",
-    "donut", "fish", "milk", "popsicle", "dumplings"];
+var cardArray = ["coding", "couch", "girl", "happy", "nerdy", "old", "party", "sassy",
+    "uhh", "coding", "couch", "girl", "happy",
+    "nerdy", "old", "party", "sassy", "uhh"];
 
 function newCards() {
     for (var i = 0; i < cardArray.length; i++) {
