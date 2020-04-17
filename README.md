@@ -40,7 +40,7 @@ Try the application live at [http://memory-match.tracyluu.com](http://memory-mat
 2. Change directory to clone folder
 
     ```shell
-    cd memory-match/
+    cd potato-match/
     ```
 
 3. Go to `index.html` in Text Editor and open in browser
