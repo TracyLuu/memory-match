@@ -1,103 +1,93 @@
-
-
 body {
-    background: url("../images/lfz-background.jpg") no-repeat center center fixed;
+    background: url("../images/brown-stripes.jpg");
     background-size: cover;
+    height: 100%;
+}
+
+header {
+    font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
+    font-size: 55px;
+    height: 100%;
     width: 100%;
-    margin: 0 auto;
+    text-align: center;
+    color: #2f7bd3;
+    text-shadow: 2px 2px #2860CE;
+    font-weight: 800;
 }
 
-h1 {
-    height: 100%;
-    padding: 10px 0;
+.stats-row {
+    padding: 1rem;
+    background-color: white;
+    width: 70px;
+    border: 2px solid #2860CE;
+    border-radius: 5px;
+    color: #2860CE;
+    font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
+    display: inline-block;
     text-align: center;
 }
 
-.game-row {
-    height: 100%;
-}
-
-aside > div {
-    padding: 5%;
-    text-align: center;
-    background-color: #86ceeb;
-    margin: 7px 10px;
-    width: 70%;
-}
-
-main {
+.stats-container {
+    background-color: #2f7bd3;
+    padding: 10px;
+    box-shadow: 5px 10px #2860CE;
+    border-radius: 5px;
     justify-content: space-evenly;
-    padding: 1%;
-    width: 100%;
+    margin: 5px;
+    width: 125px;
+    text-align: center;
+    height: 300px;
+}
+
+.stats-container2 {
+    display: none;
+}
+
+.stats-row2{
+    display: none;
+}
+
+.main-container {
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
 }
 
-main > div {
-    width: 20%;
-    height: 50%;
-    margin: 0.5% 0.25%;
-    background-image: url("../images/dining-card.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.card-container {
+    flex-basis: calc(100% / 6);
+    position: relative;
+    width: 100px;
 }
 
-.game-row {
-    display: flex;
+div.container {
+    height: 700px;
+    justify-content: space-evenly;
 }
 
-.card-front, .card-back {
+.card-front {
     height: 100%;
     width: 100%;
-    background-size: cover;
+    position: absolute;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-}
-
-.card {
-    position: relative;
+    border-radius: 5px;
+    width: 100px;
 }
 
 .card-back {
-    background-image: url("../images/dining-card.png");
-}
-
-.boba {
-    background-image: url("../images/boba.png");
-}
-
-.burger {
-    background-image: url("../images/burger.png");
-}
-
-.coffee {
-    background-image: url("../images/coffee.png");
-}
-
-.croissant {
-    background-image: url("../images/croissant.png");
-}
-
-.donut {
-    background-image: url("../images/donut.png");
-}
-
-.fish {
-    background-image: url("../images/fish.png");
-}
-
-.milk {
-    background-image: url("../images/milk.png");
-}
-
-.popsicle {
-    background-image: url("../images/popsicle.png");
-}
-
-.dumplings {
-    background-image: url("../images/dumplings.png");
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../images/back-card.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    width: 100px;
 }
 
 .hidden {
@@ -105,6 +95,8 @@ main > div {
 }
 
 #modal {
+    top: 0;
+    left: 0;
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -119,47 +111,211 @@ main > div {
     width: 50%;
     height: 50%;
     padding: 8%;
-    border: 5px solid #1ebcba;
+    border: 5px solid #2860CE;
     border-radius: 10px;
-    background-color: #303a43;
+    background-color: #2f7bd3;
     display: block;
     position: relative;
     border-style: outset;
 }
 
 p {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
     margin: auto;
     font-size: 1.7rem;
     color: white;
-    text-shadow: 3px 4px #1c2022;
+    text-shadow: 3px 4px rgb(42, 90, 187);
 }
 
 #reset {
+    font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
     font-size: 1.1rem;
     border-radius: 3px;
-    background-color: #1ebcba;
-    color: black;
+    background-color: white;
+    color: #2f7bd3;
     padding: 3%;
     margin: 5%;
     font-weight: 600;
-    border: 2px white;
+    border: 2px #2860CE;
+    border-radius: 5px;
     border-style: outset;
 }
 
-.dark-gray {
-    color: cornflowerblue;
-    text-shadow: 1px 1px aliceblue;
-}
-
-
-
-/* iphone 5/6 */
-@media (orientation: portrait){
-    @media (max-width: 768px){
-        .col-2{
-            flex-basis: 25%;
-        }
+@media (min-width: 826px){
+    header {
+        font-size: 80px;
+        text-align: center;
+        color: #2f7bd3;
+        text-shadow: 2px 3px #2860CE;
+    }
+    .header-container {
+        width: 100%;
+        height: 100px;
+    }
+    .stats-container {
+        margin: 30px 20px;
+    }
+    .main-container {
+        margin-left: 2vw;
+        height: 600px;
     }
 }
-/* ipad */
+
+@media (max-width: 825px){
+
+    .main-container {
+        flex-direction: column;
+        width: 300%;
+        margin: 0;
+        background-position: center;
+        align-items: center;
+    }
+
+    .stats-container {
+        position: relative;
+        height: 300px;
+        padding: 10px;
+        width: 150px;
+    }
+
+    .card-front {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5px;
+        height: 100px;
+    }
+
+    .card-back {
+        background-image: url("../images/back-card.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5px;
+        height: 100px;
+    }
+    .main-container {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px){
+    header {
+        height: 80px;
+    }
+
+    .stats-container {
+        display: none;
+    }
+
+    .stats-row{
+        display: none;
+    }
+
+    .stats-container {
+        display: none;
+    }
+
+    .main-container{
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 460px;
+    }
+
+    div.container{
+        height: 460px;
+    }
+
+    .stats-container2 {
+        background-color: #2f7bd3;
+        padding: 3px;
+        box-shadow: 5px 10px #2860CE;
+        border-radius: 5px;
+        justify-content: space-evenly;
+        margin: 5px;
+        width: 200px;
+        text-align: center;
+    }
+
+    .stats-container2 {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .stats-row2{
+        padding: 2px;
+        background-color: white;
+        width: 70px;
+        border: 2px solid #2860CE;
+        border-radius: 5px;
+        color: #2860CE;
+        font-family: 'Baloo Bhaina 2', Cursive, Helvetica;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .card-front {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5px;
+        width: 50px;
+    }
+
+    .card-back {
+        background-image: url("../images/back-card.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 5px;
+        width: 50px;
+    }
+    .card-container {
+        flex-basis: none;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-content: center;
+        width: 50px;
+    }
+}
+
+.coding-potato {
+    background-image: url("../images/coding-potato.jpg");
+}
+
+.couch-potato {
+    background-image: url("../images/couch-potato.jpg");
+}
+
+.girl-potato {
+    background-image: url("../images/girl-potato.jpg");
+}
+
+.happy-potato {
+    background-image: url("../images/happy-potato.jpg");
+}
+
+.nerdy-potato {
+    background-image: url("../images/nerdy-potato.jpg");
+}
+
+.old-potato {
+    background-image: url("../images/old-potato.jpg");
+}
+
+.party-potato {
+    background-image: url("../images/party-potato.jpg");
+}
+
+.sassy-potato {
+    background-image: url("../images/sassy-potato.jpg");
+}
+
+.uhh-potato {
+    background-image: url("../images/uhh-potato.jpg");
+}
