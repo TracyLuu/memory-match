@@ -10,9 +10,14 @@ var modal = document.getElementById("modal");
 
 var maxMatches = 9;
 var matches = 0;
-
 var attempts = 0;
 var gamesPlayed = 0;
+
+var matches2 = 0;
+var attempts2 = 0;
+var gamesPlayed2 = 0;
+
+var element = document.querySelector("#game-cards");
 
 var cardArray = ["coding-potato", "couch-potato", "girl-potato", "happy-potato",
     "nerdy-potato", "old-potato", "party-potato", "sassy-potato", "uhh-potato",
@@ -38,17 +43,22 @@ function handleClick(event) {
         var secondCardFront = secondCardClicked.previousElementSibling;
         secondCardClasses = secondCardFront.className;
         attempts++;
+        attempts2++;
 
         if (firstCardClasses === secondCardClasses) {
             firstCardClicked = null;
             secondCardClicked = null;
             gameCards.addEventListener("click", handleClick);
             matches++;
+            matches2++;
             displayStats();
+            displayStats2();
             if (matches === maxMatches) {
                 modal.classList.remove("hidden");
                 gamesPlayed++;
+                gamesPlayed2++;
                 displayStats();
+                displayStats2();
             }
 
         } else {
@@ -62,6 +72,7 @@ function handleClick(event) {
                 gameCards.addEventListener("click", handleClick);
             }
             displayStats();
+            displayStats2();
         }
     }
 }
@@ -82,11 +93,25 @@ function displayStats() {
     accuracy.textContent = calculateAccuracy(attempts, matches);
 }
 
+function displayStats2() {
+    document.getElementById("games-played2").textContent = gamesPlayed2;
+    document.getElementById("attempts2").textContent = attempts2;
+    accuracy2 = document.getElementById("accuracy2");
+    accuracy2.textContent = calculateAccuracy2(attempts2, matches2);
+}
+
 function calculateAccuracy(attempts, matches) {
     if (attempts === 0) {
         return "0.0%"
     }
     return ((matches / attempts) * 100).toFixed(1) + "%";
+}
+
+function calculateAccuracy2(attempts2, matches2) {
+    if (attempts2 === 0) {
+        return "0.0%"
+    }
+    return ((matches2 / attempts2) * 100).toFixed(1) + "%";
 }
 
 var resetButton = document.getElementById("reset");
@@ -96,14 +121,15 @@ function resetGame() {
     maxMatches = 9;
     matches = 0;
     attempts = 0;
+    matches2 = 0;
+    attempts2 = 0;
     displayStats();
+    displayStats2();
     destroyChildren();
     shuffleCards();
     newCards();
     modal.classList.add("hidden");
 }
-
-
 
 function newCards() {
     for (var i = 0; i < cardArray.length; i++) {
@@ -121,8 +147,6 @@ function newCards() {
         gameCards.appendChild(cardDiv);
     }
 }
-
-var element = document.querySelector("#game-cards");
 
 function destroyChildren() {
     while (element.firstChild) {
