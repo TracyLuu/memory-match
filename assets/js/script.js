@@ -54,10 +54,8 @@ function handleClick(event) {
             matches2++;
             displayStats();
             displayStats2();
-            console.log("before remove", modal);
             if (matches === maxMatches) {
                 modal.classList.remove("hidden");
-                console.log("1", modal);
                 gamesPlayed++;
                 gamesPlayed2++;
                 displayStats();
