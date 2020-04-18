@@ -119,7 +119,7 @@ div.container {
     border: 5px solid #2860CE;
     border-radius: 10px;
     background-color: #2f7bd3;
-    display: block;
+    display: inline-block;
     position: relative;
     border-style: outset;
 }
@@ -313,6 +313,9 @@ p {
     div.container {
         height: 315px;
         justify-content: space-evenly;
+    }
+    .modal-stuff {
+        margin-top: 5%;
     }
 }
 
