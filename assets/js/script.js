@@ -9,6 +9,7 @@ var secondCardClasses = null;
 var modal = document.getElementById("modal");
 
 var maxMatches = 9;
+
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
@@ -53,8 +54,10 @@ function handleClick(event) {
             matches2++;
             displayStats();
             displayStats2();
+            console.log("before remove", modal);
             if (matches === maxMatches) {
                 modal.classList.remove("hidden");
+                console.log("1", modal);
                 gamesPlayed++;
                 gamesPlayed2++;
                 displayStats();
@@ -118,7 +121,6 @@ var resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", resetGame);
 
 function resetGame() {
-    maxMatches = 9;
     matches = 0;
     attempts = 0;
     matches2 = 0;
@@ -129,6 +131,7 @@ function resetGame() {
     shuffleCards();
     newCards();
     modal.classList.add("hidden");
+    console.log(modal);
 }
 
 function newCards() {
