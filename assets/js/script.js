@@ -129,7 +129,6 @@ function resetGame() {
     shuffleCards();
     newCards();
     modal.classList.add("hidden");
-    console.log(modal);
 }
 
 function newCards() {
