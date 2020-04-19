@@ -29,6 +29,9 @@ Try the application live at [http://memory-match.tracyluu.com](http://memory-mat
     - Stats reset
 - Mobile Responsiveness
 
+## Preview
+![](assets/images/potato-preview.png)
+
 #### Getting Started
 
 1. Clone the repository.
