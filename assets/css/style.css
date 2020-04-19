@@ -82,7 +82,7 @@ div.container {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("../images/back-card.jpg");
+    background-image: url("../images/card-back.gif");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -200,19 +200,10 @@ p {
     }
 
     .card-front {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 5px;
         height: 100px;
     }
 
     .card-back {
-        background-image: url("../images/back-card.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 5px;
         height: 100px;
     }
     .main-container {
@@ -284,18 +275,10 @@ p {
     }
 
     .card-front {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 5px;
         width: 50px;
     }
 
     .card-back {
-        background-image: url("../images/back-card.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
         border-radius: 5px;
         width: 50px;
     }
