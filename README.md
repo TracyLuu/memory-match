@@ -30,6 +30,7 @@ Try the application live at [http://memory-match.tracyluu.com](http://memory-mat
 - Mobile Responsiveness
 
 ## Preview
+![](assets/images/potato-preview.png)
 
 #### Getting Started
 
