@@ -163,8 +163,6 @@ p {
 
     header {
         font-size: 80px;
-        text-align: center;
-        color: #2f7bd3;
         text-shadow: 2px 3px #2860CE;
     }
 
@@ -235,7 +233,6 @@ p {
 
     .main-container{
         justify-content: center;
-        flex-wrap: wrap;
         flex-direction: column;
         height: 460px;
     }
@@ -279,7 +276,6 @@ p {
     }
 
     .card-back {
-        border-radius: 5px;
         width: 50px;
     }
     .card-container {
