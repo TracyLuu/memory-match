@@ -194,22 +194,12 @@ p {
         align-items: center;
     }
 
-    .stats-container {
-        position: relative;
-        height: 300px;
-        padding: 10px;
-        width: 150px;
-    }
-
     .card-front {
         height: 100px;
     }
 
     .card-back {
         height: 100px;
-    }
-    .main-container {
-        align-items: center;
     }
 }
 
