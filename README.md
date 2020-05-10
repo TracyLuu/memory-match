@@ -5,7 +5,7 @@
 
 ## Description
 
-A memory match built from HTML, CSS, and Javascript that is potato themed 🥔
+We are all potatoes. We come in different sizes, shapes, and personalities. Here's a memory match built from HTML, CSS, and Javascript for potatoes like you and me. 🥔
 
 ## Technologies Used
 
