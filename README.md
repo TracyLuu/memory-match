@@ -38,10 +38,10 @@ Try the application live at [http://memory-match.tracyluu.com](http://memory-mat
     git clone https://github.com/tracyluu/potato-match.git
     ```
 
-2. Change directory to clone folder
+2. Change directory to clone folder.
 
     ```shell
     cd potato-match/
     ```
 
-3. Go to `index.html` in Text Editor and open in browser
+3. Go to `index.html` in Text Editor and open in browser.
